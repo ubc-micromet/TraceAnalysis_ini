@@ -39,9 +39,9 @@ Grayed out parameters are legacy properties that should not be used in the new i
 | variableName | Name of variable for first stage. The variable with this name created here will show up in the sub-folder “Clean” under the same folder where the original database file came from. In the Micromet Lab, these should follow the AmeriFlux naming convention. |
 | title | Descriptive title for plots/visualization.|
 | originalVariable| This is an example of adding an optional field to a trace that can be used by an advanced user. Here it’s set to be the same as the variableName. Currently, this particular field is not used for generic processing. |
-|inputFileName |{‘file name’} - The name of the database file that contains data for this trace. The brackets are mandatory. 
-The file name can include folder(s): ‘Met/Tair’. The folder paths are relative to the main site path (‘./database/yyyy/siteID’) so the above example translates into this path:   ‘./database/yyyy/siteID/Met/Tair’
-Over the lifetime of a site, the data logger programs sometimes change and a sensor measurement that was assigned to a variable may change. To allow for different variable names over the site history the inputFileName can be given as: {‘fileName1’,’fileName2’}. In that case the parameter inputFileName_dates also needs to be present in the [Trace]...[END] structure.
+|inputFileName |{‘file name’} - The name of the database file that contains data for this trace. The brackets are mandatory.<br /> 
+The file name can include folder(s): ‘Met/Tair’. The folder paths are relative to the main site path (‘./database/yyyy/siteID’) so the above example translates into this path:   ‘./database/yyyy/siteID/Met/Tair’<br />
+Over the lifetime of a site, the data logger programs sometimes change and a sensor measurement that was assigned to a variable may change. To allow for different variable names over the site history the inputFileName can be given as: {‘fileName1’,’fileName2’}. In that case the parameter inputFileName_dates also needs to be present in the [Trace]...[END] structure.<br />
 Advanced: If there is a need to load up a data file from another site, the path can be constructed in this way: ‘../../siteID2/dataFolder’. The ‘../../’ moves the path pointer up to ‘/database/yyyy’ and from there ‘siteID2/dataFolder’ takes the program to that folder.|
 |||
 |||
