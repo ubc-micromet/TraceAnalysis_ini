@@ -10,8 +10,8 @@ The first stage cleaning provides the following features:
 2. File names from the database can be renamed here. The trace name does not have to be the same as the file name from the database.
 3. The original values can be altered (calibrations can be applied, units can be changed).
 4. Basic filtering can be done:
-5. Values can be removed if they exceed minMax thresholds.
-6. Values can be clamped to the thresholds if they exceed clampedMinMax values. 
+  a. Values can be removed if they exceed minMax thresholds.
+  b. Values can be clamped to the thresholds if they exceed clampedMinMax values. 
 7. This stage creates dependencies between different traces. If one trace gets some points removed here, all its dependent traces will have those points removed too. 
 
 Introduction:
