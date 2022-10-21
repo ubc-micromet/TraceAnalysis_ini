@@ -25,4 +25,12 @@ All assignments must be to strings in single quotes, or numeric expressions (ex:
 
 <img src="images/Screen Shot 2022-10-21 at 4.25.36 PM.png">
 
+Grayed out parameters are legacy properties that should not be used in the new ini files. They can be left in or removed from the old ones.
+
+### Properties
+
+
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
 
