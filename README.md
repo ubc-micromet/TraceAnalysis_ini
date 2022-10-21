@@ -23,4 +23,6 @@ Necessary fields are: variableName, inputFileName, measurementType, units, title
 All fields must be in Matlab format
 All assignments must be to strings in single quotes, or numeric expressions (ex: threshold_const = 6, threshold_const = [6],variableName = 'Some Name')	
 
-<img src="/images/Stage one ini.png">
+<img src="/images/Stage one ini.png" alt="Alt text">
+
+
