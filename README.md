@@ -32,5 +32,9 @@ Grayed out parameters are legacy properties that should not be used in the new i
 | Field      | Description |
 | ----------- | ----------- |
 | Header/Comments      | “%” character indicates the beginning of a comment. Program will not process any characters that follow “%”. Use comments to add information and to better document the site. Each line of the ini file can be followed by a comment. Comments were removed from the above example to improve readability of this document. Refer to the example ini file at the end of this document. (link here FirstStage.ini file from DSM site)       |
-| Paragraph   | Text        |
+| Site_name   | Name of the site. Any text can go here.        |
+| SiteID      | This is the name attributed to the site in the database (e.g., DSM or BB1). |
+| Difference_GMT_to_local_time | Time difference between GMT time, that database is kept in, and the standard time at the site location (for PST this is +8). |
+|[Trace] | Marks the beginning of a new variable. The section has to end with the keyword <[END]>.|
+| variableName | Name of variable for first stage. The variable with this name created here will show up in the sub-folder “Clean” under the same folder where the original database file came from. In the Micromet Lab, these should follow the AmeriFlux naming convention. |
 
