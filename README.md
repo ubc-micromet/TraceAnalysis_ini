@@ -29,7 +29,7 @@ Grayed out parameters are legacy properties that should not be used in the new i
 
 ### Properties
 
-
+| Syntax      | Description |
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
