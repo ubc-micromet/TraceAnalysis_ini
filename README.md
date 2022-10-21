@@ -5,13 +5,14 @@
 In the first stage of cleaning the idea is to clean up the data so we can keep only the best measured values (data points) for each sensor. No interpolation is done at this stage so any removed points will not be gap-filled. If the researcher is looking for the best measurements from a particular sensor, this is the data that they want.
 
 The first stage cleaning provides the following features:
-Selects traces that are needed for future data analysis. Not all the measured variables from a site need to be here - only the ones that will be used in future analysis or that’s needed to improve cleaning.
-File names from the database can be renamed here. The trace name does not have to be the same as the file name from the database.
-The original values can be altered (calibrations can be applied, units can be changed).
-Basic filtering can be done:
-Values can be removed if they exceed minMax thresholds.
-Values can be clamped to the thresholds if they exceed clampedMinMax values. 
-This stage creates dependencies between different traces. If one trace gets some points removed here, all its dependent traces will have those points removed too. 
+
+1. Selects traces that are needed for future data analysis. Not all the measured variables from a site need to be here - only the ones that will be used in future analysis or that’s needed to improve cleaning.
+2. File names from the database can be renamed here. The trace name does not have to be the same as the file name from the database.
+3. The original values can be altered (calibrations can be applied, units can be changed).
+4. Basic filtering can be done:
+5. Values can be removed if they exceed minMax thresholds.
+6. Values can be clamped to the thresholds if they exceed clampedMinMax values. 
+7. This stage creates dependencies between different traces. If one trace gets some points removed here, all its dependent traces will have those points removed too. 
 
 Introduction:
 All traces must be enclosed in [Trace] and [End] blocks.
