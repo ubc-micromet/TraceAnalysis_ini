@@ -29,8 +29,8 @@ Grayed out parameters are legacy properties that should not be used in the new i
 
 ### Properties
 
-| Syntax      | Description |
+| Field      | Description |
 | ----------- | ----------- |
-| Header      | Title       |
+| Header/Comments      | “%” character indicates the beginning of a comment. Program will not process any characters that follow “%”. Use comments to add information and to better document the site. Each line of the ini file can be followed by a comment. Comments were removed from the above example to improve readability of this document. Refer to the example ini file at the end of this document. (link here FirstStage.ini file from DSM site)       |
 | Paragraph   | Text        |
 
