@@ -56,11 +56,14 @@ Grayed out parameters are legacy properties that should not be used in the new i
 |plotBottomRight|plot specifications used for visualization/manual cleaning program (to be implemented) |
 |plotBottomLeft |plot specifications used for visualization/manual cleaning program (to be implemented) |
 |dependent|Filter dependent variables based on specified trace. It can have multiple dependents that need to be separated by commas: ‘trace1,trace2,trace3’.<br />Note that this needs to be sorted manually. For example, when using the LI-7200 pump, all the traces that depend on the LI-7200 are dependent on the pump trace. So, for the pump: dependent = ‘CO2,H2O’. Then the CO2 trace should have dependent = ‘FC…’ and so on. Avoid circular references: CO2: dependent = ‘FC’, FC: dependent = ‘CO2’.|
-|Ameriflux_Variable||
-|||
-|||
+|[End]|Marks the end of the trace properties section.|
+
+**Note:**
+<br />
+Other properties that user wants to use later on in their own programs (or in the “Evaluate” statements in Second and Third stage cleaning ini files) can be added to each of the traces. The function that processes the ini files (read_ini_files.m) will add the property (and its assigned value) to the trace structure but the rest of the Trace Analysis programs will ignore it. The user can then parse the trace info in their own programs (or within “Evaluate” statements) and take advantage of this feature.<br />
 
 
-This repe now contains ini files for all 6 micromet flux sites.
+
+
 
 
