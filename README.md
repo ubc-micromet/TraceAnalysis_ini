@@ -55,7 +55,7 @@ Grayed out parameters are legacy properties that should not be used in the new i
 |interpLength|NOT USED (same as above)|
 |plotBottomRight|plot specifications used for visualization/manual cleaning program (to be implemented) |
 |plotBottomLeft |plot specifications used for visualization/manual cleaning program (to be implemented) |
-|dependent|Filter dependent variables based on specified trace. It can have multiple dependents that need to be separated by commas: ‘trace1,trace2,trace3’.<br />Note that this needs to be sorted manually. For example, when using the LI-7200 pump, all the traces that depend on the LI-7200 are dependent on the pump trace. So, for the pump: dependent = ‘CO2,H2O’. Then the CO2 trace should have dependent = ‘FC…’ and so on.<br />
+|dependent|Filter dependent variables based on specified trace. It can have multiple dependents that need to be separated by commas: ‘trace1,trace2,trace3’.<br />Note that this needs to be sorted manually. For example, when using the LI-7200 pump, all the traces that depend on the LI-7200 are dependent on the pump trace. So, for the pump: dependent = ‘CO2,H2O’. Then the CO2 trace should have dependent = ‘FC…’ and so on. 
 Avoid circular references: CO2: dependent = ‘FC’, FC: dependent = ‘CO2’.|
 |Ameriflux_Variable||
 |||
