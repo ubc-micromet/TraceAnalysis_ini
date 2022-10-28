@@ -76,7 +76,11 @@ The main features:
 
 <img src="images/second stage.png">
 
+## Third Stage
 
+This is the final stage of the cleaning process. The outcome of this stage are fully gap-filled data traces that can be used to calculate annual totals for fluxes and other variables. 
+
+More details coming soon!
 
 
 
