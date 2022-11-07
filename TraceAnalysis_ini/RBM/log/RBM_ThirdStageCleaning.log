@@ -1,0 +1,49 @@
+Loading required package: dplyr
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Loading required package: lubridate
+
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union
+
+
+
+In ThirdStage_REddyProc:
+   Do we need to reload the ini file here again?
+
+variables: 
+SW_IN_1_1_1
+are not included in the dataframe
+Error in `[.data.frame`(data_REddyProc, , col_order) : 
+  undefined columns selected
+Calls: ThirdStage_REddyProc -> [ -> [.data.frame
+In addition: Warning messages:
+1: In file.copy(copy_vars_full, out_path, overwrite = TRUE) :
+  problem copying D:\database_local\2022\RBM\clean\SecondStage\SW_IN_1_1_1 to D:\database_local\2022\RBM\clean\ThirdStage\SW_IN_1_1_1: No such file or directory
+2: In file.copy(copy_vars_full, out_path, overwrite = TRUE) :
+  problem copying D:\database_local\2022\RBM\clean\SecondStage\LW_IN_1_1_1 to D:\database_local\2022\RBM\clean\ThirdStage\LW_IN_1_1_1: No such file or directory
+3: In file.copy(copy_vars_full, out_path, overwrite = TRUE) :
+  problem copying D:\database_local\2022\RBM\clean\SecondStage\PPFD_IN_1_1_1 to D:\database_local\2022\RBM\clean\ThirdStage\PPFD_IN_1_1_1: No such file or directory
+Execution halted
+
+
+
+
+=============================================================
+Rscript:      C:\Program Files\R\R-4.2.1\bin\Rscript.exe
+Start:        07-Nov-2022 14:45:52
+End:          07-Nov-2022 14:45:55
+Elapsed time:    0.0 min
+==============================================================
