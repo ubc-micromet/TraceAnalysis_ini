@@ -23,7 +23,7 @@ Necessary fields are: variableName, inputFileName, measurementType, units, title
 All fields must be in Matlab format
 All assignments must be to strings in single quotes, or numeric expressions (ex: threshold_const = 6, threshold_const = [6],variableName = 'Some Name')	
 
-<img src="images/Screen Shot 2022-10-21 at 4.25.36 PM.png">
+<img src="images/first stage.png">
 
 Grayed out parameters are legacy properties that should not be used in the new ini files. They can be left in or removed from the old ones.
 
@@ -55,13 +55,32 @@ Grayed out parameters are legacy properties that should not be used in the new i
 |interpLength|NOT USED (same as above)|
 |plotBottomRight|plot specifications used for visualization/manual cleaning program (to be implemented) |
 |plotBottomLeft |plot specifications used for visualization/manual cleaning program (to be implemented) |
-|dependent|Filter dependent variables based on specified trace. It can have multiple dependents that need to be separated by commas: ‘trace1,trace2,trace3’.<br />Note that this needs to be sorted manually. For example, when using the LI-7200 pump, all the traces that depend on the LI-7200 are dependent on the pump trace. So, for the pump: dependent = ‘CO2,H2O’. Then the CO2 trace should have dependent = ‘FC…’ and so on.<br />
-Avoid circular references: CO2: dependent = ‘FC’, FC: dependent = ‘CO2’.|
-|Ameriflux_Variable||
-|||
-|||
+|dependent|Filter dependent variables based on specified trace. It can have multiple dependents that need to be separated by commas: ‘trace1,trace2,trace3’.<br />Note that this needs to be sorted manually. For example, when using the LI-7200 pump, all the traces that depend on the LI-7200 are dependent on the pump trace. So, for the pump: dependent = ‘CO2,H2O’. Then the CO2 trace should have dependent = ‘FC…’ and so on. Avoid circular references: CO2: dependent = ‘FC’, FC: dependent = ‘CO2’.|
+|[End]|Marks the end of the trace properties section.|
 
+**Note:**
+<br />
+Other properties that user wants to use later on in their own programs (or in the “Evaluate” statements in Second and Third stage cleaning ini files) can be added to each of the traces. The function that processes the ini files (read_ini_files.m) will add the property (and its assigned value) to the trace structure but the rest of the Trace Analysis programs will ignore it. The user can then parse the trace info in their own programs (or within “Evaluate” statements) and take advantage of this feature.<br />
 
-This repe now contains ini files for all 6 micromet flux sites.
+## Second Stage
+While the first stage cleaning provides the best sensor measurement, the second stage focuses on creating the best measured data for the particular property.  Example would be having multiple sensors measuring air temperature at one height. The second stage would create the best (the highest precision/accuracy, the fewest missing points) data trace (“Tair_best”). At the end of this stage the desired output is the best measured data trace (no gap filling for flux data).
+
+The main features:
+1. Combining multiple sensor measurements into one trace. This can be done in different ways or their combinations.<br />
+  a. Averaging multiple sensors to remove variability.<br />
+  b. Using one sensor as the best (most accurate value) and using the other sensor(s) only to fill in the missing values.<br />
+    &ensp; &ensp; i. A relationship can be created between the “best” sensor and its “replacement” and that relationship can be applied to the 
+    &ensp; &ensp;&ensp;&ensp;“replacement” values to improve the accuracy.<br />
+  c. Using the sensors from another near-by site to fill in the missing values at the current site.<br />
+2. More complex user-defined processing can be applied to the trace using the “Evaluate” option. User written Matlab functions can be called from this statement. Multiple Matlab statements can be called from within the “Evaluate” string. Some rules for formatting apply here (see the existing SecondStage ini file for details and examples).
+
+<img src="images/second stage.png">
+
+## Third Stage
+
+This is the final stage of the cleaning process. The outcome of this stage are fully gap-filled data traces that can be used to calculate annual totals for fluxes and other variables. 
+
+More details coming soon!
+
 
 
